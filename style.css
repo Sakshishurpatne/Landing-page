@@ -1,0 +1,199 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+    overflow: hidden;
+    cursor: url('https://www.iconfinder.com/icons/338559/cursor_mouse_pointer_icon') 10 10, auto;
+  }
+  
+  /* Particles Background (Advanced) */
+  .particles-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('https://cdn.pixabay.com/photo/2017/08/30/05/50/abstract-2695561_960_720.jpg') center/cover no-repeat;
+    z-index: -1;
+    animation: particles 30s linear infinite;
+  }
+  
+  @keyframes particles {
+    0% { transform: translateX(0) translateY(0); }
+    50% { transform: translateX(-20px) translateY(20px); }
+    100% { transform: translateX(0) translateY(0); }
+  }
+  
+  /* Background Animation */
+  .background {
+    height: 100vh;
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #000);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 120px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1);
+  }
+  
+  .signin-btn {
+    background: #e50914;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .signin-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .signin-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: left 0.3s ease;
+  }
+  
+  .signin-btn:hover::before {
+    left: 0;
+  }
+  
+  /* Glass Card */
+  .glass-card {
+    max-width: 600px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  
+  /* Interactive Hover Text */
+  .text-hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .text-hover:hover {
+    transform: scale(1.05);
+    color: #e50914;
+  }
+  
+  .glass-card h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .glass-card p {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+  }
+  
+  .email-signup {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .email-signup input {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  .email-signup input:focus {
+    outline: none;
+    border: 2px solid #e50914;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .email-signup button.cta-btn {
+    padding: 12px;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .email-signup button.cta-btn:hover {
+    background-color: #f40612;
+    transform: scale(1.05);
+  }
+  
+  /* Neumorphism */
+  .email-signup input, .email-signup button {
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1), -10px -10px 15px rgba(255, 255, 255, 0.2);
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @media (max-width: 768px) {
+    .glass-card {
+      padding: 30px 20px;
+    }
+  
+    .glass-card h1 {
+      font-size: 2rem;
+    }
+  }
+  
